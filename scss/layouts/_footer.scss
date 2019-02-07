@@ -1,0 +1,112 @@
+#footer {
+	font-size: 15px;
+	color: $white;
+	a {
+		text-decoration: none;
+	}
+}
+.footer-nav {
+	font-family: $Gotham;
+	background-color: $gray;
+	text-transform: uppercase;
+	padding: 36px 0px 31px 0;
+	@include media ('<tablet') {
+		padding: 30px 0 20px 0;
+	}
+	.container {
+		padding: 0 55px;
+		@include media ('<desktop') {
+			padding: 0 15px;
+		}
+	}
+	ul {
+		@extend %listreset;
+		display: flex;
+		justify-content: center;
+		margin-right: -28px;
+		@include media ('<tablet') {
+			flex-direction: column;
+			align-items: center;
+			margin-right: 0;
+		}
+	}
+	li {
+		margin-right: 28px;
+		@include media ('<tablet') {
+			margin: 0 0 10px 0;
+		}
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
+.footer-row {
+	background-color: rgba(0, 0, 0, .8);
+	padding: 15px 0;
+	@include media ('<tablet') {
+		padding: 30px 0;
+	}
+	.container {
+		padding: 0 55px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include media ('<desktop') {
+			padding: 0 15px;
+		}
+		@include media ('<tablet') {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.contacts {
+		text-align: center;
+		line-height: 18px;
+		margin-right: 106px;
+		@include media ('<desktop') {
+			margin-right: 30px;
+		}
+		@include media ('<tablet') {
+			margin-right: 0;
+			text-align: center;
+			width: 100%;
+		}
+	}
+	.col {
+		display: flex;
+		align-items: flex-start;
+		@include media ('<tablet') {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+	}
+	ul {
+		@extend %listreset;
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: $yellow;
+		}
+	}
+	p, address {
+		margin-bottom: 0;
+	}
+}
+.copyright {
+	margin-top: 10px;
+	margin-right: 106px;
+	max-width: 325px;
+	@include media ('<desktop') {
+		margin-right: 30px;
+	}
+	@include media ('<tablet') {
+		margin-right: 0;
+		text-align: center;
+		margin: 0 0 20px 0;
+		width: 100%;
+	}
+}

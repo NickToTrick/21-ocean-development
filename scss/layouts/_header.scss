@@ -1,0 +1,151 @@
+#header {
+	padding: 20px 23px 26px 45px;
+	box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .4);
+	position: relative;
+	z-index: 2;
+	@include media ('<widescreen') {
+		padding: 32px 15px 15px 15px;
+	}
+}
+.logo {
+	margin-right: 30px;
+	width: 345px;
+	height: auto;
+	flex: 0 0 auto;
+	@include media ('<widescreen') {
+		width: 290px;
+	}
+	@include media ('<desktop') {
+		width: 345px;
+	}
+	@include media ('<phone') {
+		width: 210px;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+.nav-holder {
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+#nav {
+	max-width: 900px;
+	margin-top: 93px;
+	@include media ('<widescreen') {
+		margin-top: 69px;
+	}
+	@include media ('<phone') {
+		margin-top: 37px;
+	}
+}
+.nav-opener {
+	display: none;
+	@include media ('<desktop') {
+		display: block;
+		width:31px;
+		height:31px;
+		position:relative;
+		text-indent:-9999px;
+		overflow:hidden;
+		border-radius:3px;
+	}
+	&:before,
+	&:after,
+	span {
+		@include animate(all);
+		background:$black;
+		border-radius:4px;
+		position:absolute;
+		top:16px;
+		left:25%;
+		right:25%;
+		height:3px;
+		margin-top:-2px;
+	}
+	&:before,
+	&:after {
+		content:'';
+		top:10px;
+	}
+	&:after{top:22px;}
+	.nav-active & {
+		span {
+			opacity: 0;
+		}
+		&:after,
+		&:before {
+			transform: rotate(45deg);
+			top: 16px;
+			left: 15%;
+			right:15%;
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+.nav-drop {
+	@extend %listreset;
+	@include animate(opacity visibility);
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 15px;
+	text-transform: uppercase;
+	margin-right: -26px;
+	@include media ('<desktop') {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+		flex-direction: column;
+		border-bottom: 1px solid #000;
+		font-size: 20px;
+		background-color: $white;
+	}
+	li {
+		margin-right: 26px;
+		@include media ('<desktop') {
+			border-top: 1px solid #000;
+			margin-right: 0;
+		}
+	}
+	a {
+		color: $black;
+		text-decoration: none;
+		@include media ('<desktop') {
+			@include animate(background-color);
+			display: block;
+			padding: 10px 15px;
+		}
+		&:hover {
+			color: $yellow;
+			@include media ('<desktop') {
+				&:hover {
+					color: $black;
+					background-color: $yellow;
+				}
+			}
+		}
+	}
+	.nav-active & {
+		opacity: 1;
+		visibility: visible;
+		max-height: 4000px
+	}
+}
+.resize-active {
+	.nav-drop {
+		transition: none !important;
+		> ul {
+			transition: none !important;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@import '../base/mixins';
+
+@include font-face (Gotham, Gotham-Bold, bold, normal);
+@include font-face (Gotham, Gotham-Medium, normal, normal);
+@include font-face (Gotham, Gotham-MediumItalic, normal, italic);
+@include font-face (Gotham-Book, Gotham-Book, normal, normal);
+@include font-face (Gotham-Book, Gotham-BookItalic, normal, italic);
+@include font-face (Univers, Univers-BoldOblique, bold, italic);
+@include font-face (MyriadPro, MyriadPro-Bold, bold, normal);
+@include font-face (MyriadPro, MyriadPro-Regular, normal, normal);

@@ -1,0 +1,61 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+$black: #000;
+$black-heading: #231F20;
+$gray: #848182;
+$light-gray: #f2f2f2;
+$gray-text: #4D4D4D;
+$gray-heading: #848182;
+$white: #fff;
+$yellow: #F1A820;
+$blue: #3B5998;
+$border-blue: #476B8B;
+
+$base-font-sans-serif: 'Gotham-Book' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$Gotham: 'Gotham' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$Univers: 'Univers' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$SourceSansPro: 'Source Sans Pro' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$MyriadPro: 'MyriadPro' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+// Body
+$base-text-color: $gray-text !default;
+$base-background-color: $white !default;
+$font-size-base: 18px !default;
+$line-height-base: 1.33333333 !default;
+$base-font-family: $base-font-sans-serif !default;
+
+$vertical-rhythm: ($line-height-base * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: $yellow;
+
+// Buttons 
+$btn-color: $white !default;
+$btn-background: $black !default;
+$btn-padding: 0.4em 0.7em !default;
+$btn-font-size: inherit !default;
+
+// Forms
+$form-element-padding: $btn-padding !default;
+$form-element-border-color: $gray !default;
+$form-element-focus-border-color: $black !default;
+$placeholder-color: $gray !default;
+
+// Headers
+$h1-font-size: 61px !default;
+$h2-font-size: 35px !default;
+$h3-font-size: 26px !default;
+$h4-font-size: 25px !default;
+$h5-font-size: 22px !default;
+$h6-font-size: 20px !default;
+
+$headings-font-family: inherit !default;
+$headings-color: $black !default;
+
+
+$animation-speed: 0.2s;
